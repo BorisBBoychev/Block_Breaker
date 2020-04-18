@@ -13,11 +13,12 @@ public class SceneLoader : MonoBehaviour {
 
     public void LoadStartScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()
     {
         Application.Quit();
     }
+
 }
