@@ -1,9 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
-using Vector2 = System.Numerics.Vector2;
-using Vector3 = UnityEngine.Vector3;
 
 
 public class Paddle : MonoBehaviour
@@ -20,7 +17,7 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         float mousePosX = Input.mousePosition.x / Screen.width * screenWidthInUnits;
-        Vector3 paddlePos = new Vector3(transform.position.x , transform.position.y , 0f);
+        Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y);
         paddlePos.x = Mathf.Clamp(mousePosX, minX, maxX);
         transform.position = paddlePos;
     }
