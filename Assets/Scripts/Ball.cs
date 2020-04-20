@@ -10,8 +10,12 @@ public class Ball : MonoBehaviour
      private bool launched = false;
      [SerializeField] private float lauchVelX = 2f;
      [SerializeField] private float lauchVelY = 15f;
+    [SerializeField] private AudioClip[] ballSounds;
+
+    private AudioSource ballSFX;
     void Start()
     {
+        ballSFX = GetComponent<AudioSource>();
         paddleToBall = transform.position - paddle.transform.position;
         rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -39,5 +43,15 @@ public class Ball : MonoBehaviour
     {
         Vector2 paddlePos = new Vector2(paddle.transform.position.x, paddle.transform.position.y);
         transform.position = paddlePos + paddleToBall;
+    }
+
+    void OnCollisionEnter2D(Collision2D collider)
+    {
+        if (launched)
+        {
+            AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length)];
+            ballSFX.PlayOneShot(clip);
+        }
+
     }
 }
