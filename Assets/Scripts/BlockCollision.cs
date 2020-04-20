@@ -6,19 +6,19 @@ using UnityEngine;
 public class BlockCollision : MonoBehaviour
 {
     [SerializeField]AudioClip blockSFX;
-    private Level level;
 
     void Start()
     {
-        level = FindObjectOfType<Level>();
-        level.BreakableBlocksCount();
+        Level.instance.breakableBlocks++;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         AudioSource.PlayClipAtPoint(blockSFX , Camera.main.transform.position );
         Destroy(gameObject);
+        Level.instance.destroyedBlocks++;
     }
+
 
 
 }

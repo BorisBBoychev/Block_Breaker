@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0df9b6297321d0442819efd9f10db3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyedBlocks: 0
+  breakableBlocks: 0
+  levelCompleteText: {fileID: 0}
