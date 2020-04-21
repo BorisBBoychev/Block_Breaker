@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockSFX: {fileID: 8300000, guid: 0a05df0e1ec84614689807b4996e6276, type: 3}
+  destroyVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
 --- !u!82 &23688440
 AudioSource:
   m_ObjectHideFlags: 0

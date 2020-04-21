@@ -33,7 +33,7 @@ public class GameStatus : MonoBehaviour
     {
         scoreText.text = "SCORE: " + score.ToString();
         highscore = PlayerPrefs.GetInt("highscore", highscore);
-        highScoreText.text = "HIGHSCORE : " + highscore.ToString();
+        highScoreText.text = "HIGHSCORE: " + highscore.ToString();
     }
 
     // Update is called once per frame
@@ -60,7 +60,7 @@ public class GameStatus : MonoBehaviour
         if (score > highscore)
         {
             highscore = score;
-            highScoreText.text = "HIGHSCORE : " + highscore.ToString();
+            highScoreText.text = "HIGHSCORE: " + highscore.ToString();
         }
     }
 }

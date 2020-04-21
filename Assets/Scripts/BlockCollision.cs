@@ -6,6 +6,7 @@ using UnityEngine;
 public class BlockCollision : MonoBehaviour
 {
     [SerializeField]AudioClip blockSFX;
+    [SerializeField] private GameObject destroyVFX;
     private GameStatus gameStatus;
 
     void Start()
@@ -20,6 +21,13 @@ public class BlockCollision : MonoBehaviour
         Destroy(gameObject);
         Level.instance.destroyedBlocks++;
         gameStatus.IncreaseScore();
+        TriggerVFX();
+    }
+
+    void TriggerVFX()
+    {
+        var sparkles = Instantiate(destroyVFX, transform.position , transform.rotation);
+        Destroy(sparkles , 1f);
     }
 
 
