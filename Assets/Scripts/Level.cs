@@ -11,6 +11,10 @@ public class Level : MonoBehaviour
     public int breakableBlocks;
     [SerializeField] GameObject levelCompleteText;
 
+
+    void Start()
+    {
+    }
     void Awake()
     {
         if (instance == null)
@@ -22,15 +26,14 @@ public class Level : MonoBehaviour
     void Update()
     {
         LevelComplete();
-        Invoke("LoadNextLevel", 5f);
+        LoadNextLevel();
     }
 
     public void LoadNextLevel()
     {
         if (Level.instance.breakableBlocks == Level.instance.destroyedBlocks)
         {
-            SceneManager.LoadScene("Level2");
-            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

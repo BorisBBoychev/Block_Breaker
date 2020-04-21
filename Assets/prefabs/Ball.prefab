@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paddle: {fileID: 0}
   rigidbody: {fileID: 7165847103057750289}
+  launched: 0
   lauchVelX: 2
   lauchVelY: 20
   ballSounds:
