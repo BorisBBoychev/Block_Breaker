@@ -10,10 +10,12 @@ public class Level : MonoBehaviour
     public int destroyedBlocks;
     public int breakableBlocks;
     [SerializeField] GameObject levelCompleteText;
+    private GameStatus gameStatus;
 
 
     void Start()
     {
+        gameStatus = FindObjectOfType<GameStatus>();
     }
     void Awake()
     {
