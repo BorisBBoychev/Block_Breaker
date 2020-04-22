@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Game
   - Background
+  - Breakable
+  - Unbreakable
   layers:
   - Default
   - TransparentFX

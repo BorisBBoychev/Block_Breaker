@@ -43,7 +43,6 @@ public class Level : MonoBehaviour
     {
         if (Level.instance.breakableBlocks == Level.instance.destroyedBlocks)
         {
-            levelCompleteText.SetActive(true);
             Ball.instance.launched = false;
         }
     }
