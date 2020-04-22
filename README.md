@@ -11,7 +11,6 @@ Mobile:
 Slide on the screen to move the paddle and tap to shoot the ball
 
 | PC |
-| --- | --- |
 | Move paddle | Mouse |
 | Shoot the ball | Left Mouse button |
 | Mobile |
