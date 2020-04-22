@@ -141,6 +141,7 @@ MonoBehaviour:
   lauchVelY: 20
   ballSounds:
   - {fileID: 8300000, guid: 7a2c238cd01586d4d861f877f95801cb, type: 3}
+  randomFactor: 0.5
 --- !u!82 &7165847103057750294
 AudioSource:
   m_ObjectHideFlags: 0

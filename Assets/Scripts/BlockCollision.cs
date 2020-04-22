@@ -7,7 +7,7 @@ public class BlockCollision : MonoBehaviour
 {
     [SerializeField]AudioClip blockSFX;
     [SerializeField] private GameObject destroyVFX;
-    [SerializeField] private int maxHits = 2;
+    [SerializeField] private int maxHits;
     private GameStatus gameStatus;
     [SerializeField] private int hitsReceived;
     [SerializeField] private Sprite[] hitSprites;
@@ -27,6 +27,7 @@ public class BlockCollision : MonoBehaviour
         if (gameObject.tag == "Breakable")
         {
             hitsReceived++;
+            maxHits = hitSprites.Length + 1;
             if (hitsReceived >= maxHits)
             {
                 DestroyBlock();

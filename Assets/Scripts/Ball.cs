@@ -1,17 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
     public static Ball instance;
-     public GameObject paddle;
-     private Vector2 paddleToBall;
-     public Rigidbody2D rigidbody;
-     public bool launched = false;
-     [SerializeField] private float lauchVelX = 2f;
-     [SerializeField] private float lauchVelY = 15f;
+    public GameObject paddle;
+    private Vector2 paddleToBall;
+    public Rigidbody2D rigidbody;
+    public bool launched = false;
+    [SerializeField] private float lauchVelX = 2f;
+    [SerializeField] private float lauchVelY = 15f;
     [SerializeField] private AudioClip[] ballSounds;
+    [SerializeField] private float randomFactor = 0.2f;
 
     private AudioSource ballSFX;
 
@@ -36,14 +35,14 @@ public class Ball : MonoBehaviour
             LockBallToPaddle();
             LauchBall();
         }
-        
+
     }
 
     private void LauchBall()
     {
         if (Input.GetMouseButtonDown(0)) //left mouse button or touch on the screen
         {
-            rigidbody.velocity = new Vector2(lauchVelX,lauchVelY);
+            rigidbody.velocity = new Vector2(lauchVelX, lauchVelY);
             launched = true;
         }
     }
@@ -56,10 +55,12 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collider)
     {
+        Vector2 velTweak = new Vector2(Random.Range(0f, randomFactor), Random.Range(0f, randomFactor));
         if (launched)
         {
             AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length)];
             ballSFX.PlayOneShot(clip);
+            rigidbody.velocity += velTweak;
         }
 
     }

@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c1e7c85127bfb054592b9e4fc6bd4a27, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.2, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1050757034136220809
 MonoBehaviour:
@@ -138,6 +138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockSFX: {fileID: 8300000, guid: 0a05df0e1ec84614689807b4996e6276, type: 3}
   destroyVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  maxHits: 2
+  hitsReceived: 0
+  hitSprites: []
 --- !u!82 &23688440
 AudioSource:
   m_ObjectHideFlags: 0
