@@ -14,6 +14,7 @@ public class GameStatus : MonoBehaviour
     [SerializeField] private int highscore;
     [SerializeField] private Text scoreText;
     [SerializeField] private Text highScoreText;
+    [SerializeField] private bool isAutoPlayEnabled;
 
     void Awake()
     {
@@ -62,5 +63,10 @@ public class GameStatus : MonoBehaviour
             highscore = score;
             highScoreText.text = "HIGHSCORE: " + highscore.ToString();
         }
+    }
+
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
     }
 }
