@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.8664431}
   m_AnchorMax: {x: 0.19875, y: 0.93088627}
-  m_AnchoredPosition: {x: 4.4950867, y: 1.3208923}
+  m_AnchoredPosition: {x: 4.495117, y: 1.3209229}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1278518117
@@ -127,6 +127,7 @@ MonoBehaviour:
   highscore: 0
   scoreText: {fileID: 6936401226204620363}
   highScoreText: {fileID: 1278518116}
+  isAutoPlayEnabled: 0
 --- !u!1001 &690696259431960973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,6 +253,11 @@ PrefabInstance:
     - target: {fileID: 1067329887453483695, guid: 466c663b39fe48447b67f43bad1a47ac,
         type: 3}
       propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067329887453483695, guid: 466c663b39fe48447b67f43bad1a47ac,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

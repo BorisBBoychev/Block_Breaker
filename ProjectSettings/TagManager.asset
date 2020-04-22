@@ -17,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - HitUI
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1280055441
+    locked: 0
+  - name: HitUI
+    uniqueID: 2753531397
     locked: 0
