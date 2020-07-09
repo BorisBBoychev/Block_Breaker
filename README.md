@@ -10,9 +10,7 @@ Mouse movement to move paddle and left click to shoot the ball
 Mobile:
 Slide on the screen to move the paddle and tap to shoot the ball
 
-| Mobile |
-| -------------------------- |
-| Movement | Left and right swap |
-|| |
-| Launching The Ball |Tap|
-| | |
+| Mobile | Controls |
+| ----------|--------------- |
+| Movement | Left and right swipe |
+| Launching The Ball |Tap on the screen|
